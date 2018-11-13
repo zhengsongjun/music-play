@@ -62,7 +62,7 @@ audio.onpause = function(){
 //渲染ajax获取数据
 function getMusicList(callback){
     var xhr = new XMLHttpRequest();
-    xhr.open('GET','/music.json',true);
+    xhr.open('GET','/music-play/music.json',true);
     xhr.onload = function(){
         if( ( xhr.status >= 200 && xhr.status < 300) || xhr.status == 304 ){
             callback(JSON.parse(xhr.responseText));
